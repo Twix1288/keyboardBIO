@@ -1,10 +1,16 @@
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
 from ui import AuthUI
 from db_manager import DBManager
 from biometrics import BiometricsEngine
 
-# Constants (Should match user provided credentials)
-SUPABASE_URL = "https://ganeutsiopckxgcormvw.supabase.co"
-SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdhbmV1dHNpb3Bja3hnY29ybXZ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk5NTM5NjAsImV4cCI6MjA3NTUyOTk2MH0.1jSY6XQyuGCnUD56YJB8SFLSYCrGDGxsptWtk1gYdUo"
+# Constants (Loaded from environment variables)
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 
 def main():
     print("[DEBUG] Starting Main...")

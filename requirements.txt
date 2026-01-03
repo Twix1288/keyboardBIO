@@ -1,0 +1,7 @@
+numpy
+scipy
+supabase
+customtkinter
+customtkinter
+matplotlib
+pandas
